@@ -1,4 +1,5 @@
 ###### [Archivematica Manual](../README.md) `|` [Ingest Guidelines](overview.md)
+###### [Start a Transfer](start-transfer.md) `|` Decision Points `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md)
 
 # Decision Points
 Some Archivematica microservices allow multiple options requiring choice.

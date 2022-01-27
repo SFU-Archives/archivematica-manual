@@ -1,4 +1,5 @@
-###### [Archivematica Manual](../README.md)
+###### [Archivematica Manual](../README.md) `>` Ingest Guidelines
+###### [Start a Transfer](start-transfer.md) `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md)
 
 # Ingest Guidelines: Overview
 This section describes how to process a `transfer package` through the Archivematica `Dashboard`.
