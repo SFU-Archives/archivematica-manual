@@ -32,9 +32,5 @@
 | Store DIP location: 	| None 	|
 
 
-
-## Ingest tab
-
-
 ---
 ###### Last updated: Jan 26, 2022
