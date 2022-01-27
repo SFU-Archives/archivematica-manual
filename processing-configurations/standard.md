@@ -1,9 +1,9 @@
-###### [Archivematica Manual](../README.md) `|` [Ingest Guidelines](overview.md)
+###### [Archivematica Manual](../README.md) `>` [Processing Configurations](overview.md)
 
 # Standard Processing Configuration
 
-| Microservice | Setting | Reason
-|---	|---	|---	|
+| Microservice | Setting |
+|---	|---	|
 | Assign UUIDs to directories 	| No 	|
 | Generate transfer structure report 	| Yes 	|
 | Perform file format identification (Transfer) 	| Yes 	|
