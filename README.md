@@ -20,11 +20,15 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 - Upload to Staging Server
 
 ### Ingest Guidelines
-- [Overview](ingest-guidelines/overview.md)
-- [Start a Transfer](ingest-guidelines/start-transfer.md)
-- Decision Points
-- Update AIS
-- Appraisal and Selection
+[Overview](ingest-guidelines/overview.md)
+
+[Start a Transfer](ingest-guidelines/start-transfer.md)
+
+[Decision Points](ingest-guidelines/decision-points.md)
+
+Update AIS Database
+
+Appraisal and Selection
 
 ### Processing Configurations
 - Alder
