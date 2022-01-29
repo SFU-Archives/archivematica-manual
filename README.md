@@ -9,7 +9,7 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 - Ad Hoc Digitization
 - Digitization Projects
 - Born-digital Transfers
-- Processing Backlog
+- Processing Backlog AIPs
 
 ### Pre-ingest Actions
 - Accessioning
@@ -44,6 +44,7 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 ### DIP Management
 - DIP Scenarios
 - Access and Copyright Review
+- CLI DIP upload
 
 ### Backup and Recovery
 - Backup

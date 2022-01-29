@@ -1,23 +1,9 @@
 ###### [Archivematica Manual](../README.md) `|` [Ingest Guidelines](overview.md)
-###### [Start a Transfer](start-transfer.md) `|` Decision Points `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md)
+###### [Start a Transfer](start-transfer.md) `|` Decision Points `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md) `|` [Error Handling](error-handling.md)
 
 # Decision Points
-Some Archivematica microservices allow multiple options requiring choice.
-- Options can be pre-selected in an automated [custom processing configuration](../processing-configurations/overview.md).
-- `Decisions points` occur when microservices settings are **not** pre-configured and therefore require the archivist to manually choose an option.
-
-This page describes the `decision points` in the [standard processing configuration](../processing-configurations/standard.md).
-- For custom configurations, see the entries on [Processing Configurations: Overview](../processing-configurations/overview.md).
-
-There is only one `decision point` required on the `Transfer` tab. Pre-defined settings include:
-- Generate tree directory structure of the transfer.
-- Identify file formats.
-- Run BulkExtractor to identify potentially sensitive data (e.g. credit card numbers).
-
-On the `Ingest` tab there are several `decision points`, mainly relating to the choice of whether and where to create / save `AIPs` and `DIPs`. Pre-defined settings include:
-- Generate thumbnails.
-- OCR image files.
-- Use `7z without compression` as the AIP compression setting.
+`Decision points` occur when certain microservices in the Archivematica `Dashboard` require the archivist to manually choose an option. This page describes the `decision points` in the [standard processing configuration](../processing-configurations/standard.md).
+- For custom configurations that automate some or all microservices, see [Processing Configurations: Overview](../processing-configurations/overview.md).
 
 **Decision points:**
 - [Create SIP from Transfer](#create-sip-from-transfer)
@@ -35,9 +21,9 @@ On the `Ingest` tab there are several `decision points`, mainly relating to the 
 Specify what to do with the `SIP` (transfer).
 
 `Create single SIP and continue processing`
-- Send transfer to the `Ingest` tab to continue.
+- Send the transfer to the `Ingest` tab to continue.
 - Use if the transfer does not require any additional appraisal, selection, or arrangement.
-- Use if it does require addtional processing but you will not be doing this in the immediate future (process through Archivematica to create a `backlog AIP`).
+- Use if it does require additional processing but you will not be doing this in the immediate future (process through Archivematica to create a [backlog AIP](../ingest-scenarios/processing-backlog-aips.md).
 
 `Send to backlog`
 - Send to Archivematica backlog.
@@ -85,11 +71,7 @@ Pink shading indicates that a file has not been normalized to an accepted preser
 - But in some cases (e.g with a number of images formats like `jpg`) this is because the Archives has departed from the default Archivematica rules.
 - You can use the `Review` button to navigate to the a file to view / download for further inspection.
 - If you have concerns about a particular result, consult with Artefactual support.
-
-Normalization failures will also generate an Archivematica email report.
-- You should save these reports and upload to the AIS in the AIP's `Event` log.
-- These emails often cannot be printed / pdf'ed easily (file names may not fit the screen).
-- It is better to copy the table data from the email into a `csv` and save / upload it in this format.
+- For more information on how to handle failures, see [Error Handling](error-handling.md).
 
 When you have review normalization results, choose an option: `Approve`, `Redo`, or `Reject`.
 - It isn't entirely clear what affect `Redo` has (the Archives has not experimented with this option).
@@ -102,11 +84,11 @@ You can add descriptive or rights metadata to the `SIP` by clicking the `documen
 ## File format identification (submission documentation)
 This step lets you runs file format identification and normalization on `submission documentation`.
 
-`Yes`
-- Use if you included `submission documentation` in the `transfer package` (see [Submission Documentation](../pre-ingest-actions/submission-documentation.md)).
+Choose `Yes` if you included `submission documentation` in the `transfer package` (see [Submission Documentation](../pre-ingest-actions/submission-documentation.md)); otherwise, choose `No`.
 
-`No`
-- Use if not applicable (i.e. there is no `submission documentation`).
+## AIP and DIP creation / storage
+You will typically be prompted for `AIP` and `DIP` microservices at the same time. `AIP` processing typically takes longer. **Always let Archivematica complete `AIP` processing before running the `DIP` microservices.**
+- If you process the `DIP` first and an error subsequently occurs during `AIP` creation / storage, you will then have to manually delete the uploaded or stored DIP.
 
 ## Store AIP
 This is your final chance to reject the AIP and cancel the current transfer.
@@ -134,18 +116,32 @@ Encryption is used to ensure that the Archives can send out `AIPs` containing se
 - Use for `AIPs` that require encryption.
 
 ## Upload DIP
-- Upload DIP to AtoM/Binder
-- Upload DIP to Archives Space
-- Upload DIP to ContentDM
-- Do not upload DIP
+- If an error occurs during `AIP` creation / storage, you will likely have to re-run the entire transfer
+This step allows you to upload the `DIP` to SFU AtoM (production site).
+- **Materials must first be cleared for access and copyright restrictions before they can be uploaded.**
+
+`Upload DIP to AtoM/Binder`
+- Use for materials that have cleared access and copyright review.
+- Do not use for digitized materials that are **already** described in AtoM (there is a separate process for this; see [CLI DIP Upload](../dip-management/cli-dip-upload.md).
+
+When selecting this option you will be prompted to enter the AtoM `stub` of the **parent** description.
+- The `stub` is typically the parent reference code with a lowercase `f-` (e.g. "f-49-1-0-0-1").
+- If you know that you will be uploading to AtoM, you can save this step by enter the parent `stub` in the `Access system ID`; see [Start a Transfer](start-transfer.md#access-system-id).
+
+`Upload DIP to Archives Space`, `Upload DIP to ContentDM`
+- Do not use.
+- SFU Archives does not use these systems.
+
+`Do not upload DIP`
+- Use for transfers being sent through as `backlog AIPs` (i.e. require future processing).
+- Use for processed materials that have not yet been reviewed for access and copyright clearance or have been reviewed but did not clear or are not being sent to AtoM for any other reason.
+- Use for digitized materials that were previously described in AtoM (to upload these, see [CLI DIP Upload](../dip-management/cli-dip-upload.md)).
 
 ## Store DIP
-- Store DIP
-- Do not store
+If you chose to normalize for access (i.e. created a DIP), always choose `Store DIP`.
 
 ## Store DIP location
-- Default location
-- <pipeline_name> DIP store
+Always choose `<pipeline_name> DIP store`; do not use `Default location`.
 
 ---
-###### Last updated: Jan 27, 2022
+###### Last updated: Jan 28, 2022

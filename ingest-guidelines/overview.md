@@ -1,5 +1,5 @@
 ###### [Archivematica Manual](../README.md) `>` Ingest Guidelines
-###### [Start a Transfer](start-transfer.md) `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md)
+###### [Start a Transfer](start-transfer.md) `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md) `|` [Error Handling](error-handling.md)
 
 # Ingest Guidelines: Overview
 This section describes how to process a `transfer package` through the Archivematica `Dashboard`.
@@ -27,6 +27,7 @@ The Archives has tried to minimize the number of `decisions points` requiring ma
 - [Decision Points](decision-points.md)
 - [Update AIS](update-ais.md)
 - [Appraisal and Selection](appraisal-and-selection.md)
+- [Error Handling](error-handling.md)
 
 ---
-###### Last updated: Jan 27, 2022
+###### Last updated: Jan 28, 2022
