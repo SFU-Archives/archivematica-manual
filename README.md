@@ -1,5 +1,5 @@
 # SFU Archives Archivematica Manual
-SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main platform for digital preservation. This site provides system documentation and guidelines for use. It is a work in progress; many of the sections listed are place-holders for planned content to be added as it is prepared.
+SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main platform for digital preservation. This site provides system documentation and guidelines for use. It is a work in progress; many of the sections listed below are place-holders for text to be added as it is prepared.
 
 ### Archivematica Environment
 - Architecture
