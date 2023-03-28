@@ -1,14 +1,14 @@
 # SFU Archives Archivematica Manual
-SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main platform for digital preservation. This site provides system documentation and guidelines for use. It is a work in progress and sections will be added as they are prepared.
+SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main platform for digital preservation. This site provides system documentation and guidelines for use. It is a work in progress; many of the sections listed are place-holders for planned content to be added as it is prepared.
 
 ### Archivematica Environment
 - Architecture
 - User Accounts
 
 ### Ingest Scenarios
-- Ad Hoc Digitization
-- Digitization Projects
 - Born-digital Transfers
+- Digitization Projects
+- Ad Hoc Digitization
 - Processing Backlog AIPs
 
 ### Pre-ingest Actions
