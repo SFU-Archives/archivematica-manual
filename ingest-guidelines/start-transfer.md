@@ -2,10 +2,10 @@
 ###### Start a Transfer `|` [Decision Points](decision-points.md) `|` [Update AIS](update-ais.md) `|` [Errors](errors.md)
 
 # Start a Transfer
-This page describes how to start an ingest project on the `Transfer` tab.
-- For guidance on the `Backlog` and `Appraisal` tabs see the [Appraisal page](appraisal.md) in this section of the Manual.
+This page describes how to start an ingest project on the Archivematica `Transfer` tab.
+- For guidance on the `Backlog` and `Appraisal` tabs see the [Appraisal section](appraisal/overview.md) in this Manual.
 
-The microservices on the `Transfer` tab will transform the `transfer package` into an Archivematica `SIP` (Submission Information Package) which in turn the microservices of the `Ingest` tab will transform into an `AIP` (Archival Information Package).
+The microservices on the `Transfer` tab will transform the `transfer package` into an Archivematica `SIP` (Submission Information Package); this in turn will be transformed by the microservices of the `Ingest` tab into an `AIP` (Archival Information Package).
 
 **Contents:**
 - [Transfer type](#transfer-type)
@@ -84,5 +84,4 @@ You can process the transfer with either the default [standard processing config
 - Click the drop-down arrow to view and select a custom processing configurations.
 - Custom configurations are described on the [Processing configurations overview page](../processing-configurations/overview.md).
 
----
-###### Last updated: Jan 26, 2022
+###### Last updated: Mar 28, 2023
