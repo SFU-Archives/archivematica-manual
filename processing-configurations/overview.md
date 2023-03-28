@@ -25,13 +25,13 @@ This config sends transfer packages to the Archivematica `Backlog` tab.
 | [bcklg_encr](bcklg-encr.md) | Full AIP, no normalization, send to encrypted storage |
 | [bcklg_opn](bcklg-opn.md) | Full AIP, no normalization, send to open (non-encrypted) storage |
 
-These configs create full Archivematica AIPs, but with **no** normalization for preservation or access, i.e. files are stored in original formats only.
+These configs create `Backlog AIPs` – full Archivematica AIPs, but with **no** normalization for preservation or access, i.e. files are stored in original formats only.
 
-Use to send transfers to backlog for later processing (appraisal, selection, arrangement) outside Archivematica. Later processing entails download, work on the files, then re-ingest of the new package to Archivematica and deletion of the old `Backlog AIP`.
+Use to send transfers to backlog for later processing (appraisal, selection, arrangement) outside Archivematica. Later processing entails download and work on the files, then re-ingest of the new package and deletion of the old `Backlog AIP`.
 
 Normalization is omitted at this stage because:
 - Preservation copies would be created in the same directory as the originals, making later processing (and re-ingest) more cumbersome – the processing archivist will want to work on the set of original files rather than a double set of originals + preservation copies.
-- Access copies would be created and stored to a single directory, regardless of their location in the original folder hierarchy – this makes it difficult to locate access copies as needed.
+- Access copies would be created and stored to a single directory, regardless of their location in the original folder hierarchy – with large transfers, this makes it difficult to locate access copies as needed.
 
 The main variable here is whether or not to encrypt the `Backlog AIP`.
 - Choose to encrypt if there is any possibility that the transfer contains personal or confidential information.
@@ -49,13 +49,17 @@ The main variable here is whether or not to encrypt the `Backlog AIP`.
 | [prc_encr_dipMNL_str](prc-encr-dipmnl-str) | Encrypted storage, DIP (redacted) created manually outside Archivematica, do not send DIP to AtoM |
 | [prc_encr_dipAM_str](prc-encr-dipam-str.md) | Encrypted storage, normalize for access, do not send DIP to AtoM |
 
-Use these configs for fully processed AIPs, i.e. contents will not require further action or changes. The main variables are whether to:
+Use these configs for fully processed AIPs, i.e. the contents have been appraised, selected and arranged and will not require further action or changes.
+
+The main variables are whether to:
 - Store encrypted or open.
 - Create DIPs via Archivematica or manually or not at all.
 - Send DIPs to AtoM or not.
 
-Pending review materials should be stored encrypted.
+Materials with `access status` = "pending review" should be stored encrypted.
 
-If DIPs are created, they are stored. DIPs for restricted materials may be created by making a redacted copy outside Archivematica; see the [DIP management section](../dip-management/overview.md).
+All packages will be normalized for preservation.
+
+If DIPs are created, they are stored. DIPs for restricted materials may be created by making a redacted copy outside Archivematica; see the [DIP management section](../dip-management/overview.md) for more detail.
 
 ###### Last updated: Mar 28, 2023
