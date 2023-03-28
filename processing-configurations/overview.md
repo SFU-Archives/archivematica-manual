@@ -11,6 +11,8 @@ Standard and custom `processing configs` are (or will be) the same for the Archi
 This is the default standard configuration. It exposes 10 `decision points` that require manual intervention; see [Decision Points](../ingest-guidelines/decisions-points.md) for a description of options.
 
 ## Archivematica backlog
+| Config | Description |
+|---	   |---	         |
 | [bcklog_AM](bcklg-am.md) | Sends transfer to Archivmatica backlog |
 
 This config sends transfer packages to the Archivematica `Backlog` tab.
