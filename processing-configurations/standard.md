@@ -3,7 +3,7 @@
 # Standard Processing Configuration
 
 | Microservice | Setting |
-|---	|---	|
+|:---	         |:---     |
 | Assign UUIDs to directories 	| No 	|
 | Generate transfer structure report 	| Yes 	|
 | Perform file format identification (Transfer) 	| Yes 	|
