@@ -12,7 +12,7 @@ This is the default standard configuration. It exposes 10 `decision points` that
 
 ## Archivematica backlog
 | Config | Description |
-|---	   |---	         |
+|:---	   |:---         |
 | [bcklog_AM](bcklg-am.md) | Sends transfer to Archivmatica backlog |
 
 This config sends transfer packages to the Archivematica `Backlog` tab.
