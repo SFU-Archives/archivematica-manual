@@ -5,31 +5,23 @@ Archivematica `processing configurations` regulate how many `decision points` ar
 
 Standard and custom `processing configs` are (or will be) the same for the Archives' two Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
 
-## List of processing configs
-- [Standard configuration](#standard-configuration) > [standard-config](standard.md)
-
-- [Archivematica backlog](#archivematica-backlog) > [bcklg_AM](bcklg-am.md)
-
-- [Backlog AIPs](#backlog-aips) > [bcklg_opn](bcklg-opn.md) | [bcklg_encr](bcklog-encr.md)
-
-- [Processed AIPs](#processed-aips) > [prc_opn_noDIP](prc_opn_noDIP.md) | [prc_opn_dipMNL_atm](prc_opn_dipMNL_atm.md) | [prc_opn_dipMNL_str](prc_opn_dipMNL_str.md) | [prc_opn_dipAM_atm](prc_opn_dipAM_atm.md) | [prc_opn_dipAM_str](prc_opn_dipAM_str.md) | [prc_encr_noDIP](prc_encr_noDIP.md) | [prc_encr_dipMNL_atm](prc_encr_dipMNL_atm.md) | [prc_encr_dipMNL_str](prc_encr_dipMNL_str.md) | [prc_encr_dipAM_str](prc_encr_dipAM_str.md)
-
 ## Standard configuration
-The default standard configuration exposes 10 `decision points`. See [Decision Points](../ingest-guidelines/decisions-points.md) for a discussion of options on the microservices that require manual intervention.
+- [Standard (default) processing config](standard.md)
 
-**Config:**
-- `Standard (default) processing config` – [View](standard.md)
+This is the default standard configuration. It exposes 10 `decision points` that require manual intervention; see [Decision Points](../ingest-guidelines/decisions-points.md) for a description of options.
 
 ## Archivematica backlog
+| [bcklog_AM](bcklg-am.md) | Sends transfer to Archivmatica backlog |
+
 This config sends transfer packages to the Archivematica `Backlog` tab.
 - Use **only** when you intend to use Archivematica for appraisal, selection and arrangement via the `Appraisal` tab and in the near future.
 - Archivematica's `Backlog` space should not be used for long-term backlog storage; create `Backlog AIPs` instead.
 
-**Config:**
-- `bcklog_AM` – sends package to Archivematica backlog | [View](bcklog-am.md)
-
 ## Backlog AIPs
-These configs create full Archivematica AIPs, but with **no** normalization for preservation or access (stores files in original directory structure and in original formats only).
+- [bcklg_opn](bcklg-opn.md) – open
+- [bcklg_encr])(bcklg-encr.md) – encrypted
+
+These configs create full Archivematica AIPs, but with **no** normalization for preservation or access, i.e. files stored in original formats only.
 - Use to send transfers to backlog for later processing (appraisal, selection, arrangement) outside Archivematica.
 
 Later processing entails re-ingest of the new package to Archivematica and deletion of the old `Backlog AIP`. Normalization is omitted at this stage because:
@@ -37,6 +29,7 @@ Later processing entails re-ingest of the new package to Archivematica and delet
 - Access copies would be created and stored to a single directory, regardless of their location in the original folder hierarchy, making it difficult to locate access copies as needed.
 
 The main variable here is whether or not to encrypt the `Backlog AIP`.
+- Choose to encrypt if there is any possibility that the transfer contains personal or s
 
 Config:
 ## Processed AIPs
