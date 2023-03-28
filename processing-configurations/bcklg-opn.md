@@ -33,6 +33,6 @@ Use to create a `Backlog AIP` with open storage (i.e. transfer is known to conta
 | Store AIP location: | <pipeline_name> production AIP store |
 | Upload DIP: | Do not upload DIP |
 | Store DIP? | Do not store |
-| Store DIP location: | <pipeline_name> production DIP store |
+| Store DIP location: | None |
 
 ###### Last updated: Mar 28, 2023
