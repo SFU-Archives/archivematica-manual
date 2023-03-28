@@ -23,8 +23,8 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 - [Overview](ingest-guidelines/overview.md)
 - [Start a Transfer](ingest-guidelines/start-transfer.md)
 - [Decision Points](ingest-guidelines/decision-points.md)
-- [Update AIS Database](ingest-guidelines/update-AIS.md)
-- [Archivematica Errors](ingest-guidlines/errors.md)
+- [Update AIS Database](ingest-guidelines/update-ais.md)
+- [Archivematica Errors](ingest-guidelines/errors.md)
 
 ### Processing Configurations
 - [Overview](processing-configurations/overview.md)
