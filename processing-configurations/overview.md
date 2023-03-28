@@ -1,16 +1,16 @@
 ###### [Archivematica Manual](../README.md) `>` Processing Configurations
 
 # Processing Configurations
-Archivematica `processing configurations` regulate how many `decision points` are exposed to the archivist, requiring them to select among several options for processing. The Archives has structured the standard default `processing config` to minimize the number of `decision points` that require manual intervention. Custom `processing configs` automate ingest by specifying in advance **all** decision point selections for a given transfer. Not all transfers can be handled in the same way, so the Archives has created multiple custom `processing configs` to cover most ingest scenarios.
+Archivematica `processing configurations` set default values for `decision point` fields and how many are exposed to the archivist, requiring manual intervention (selection of an option). The Archives has structured the standard default `processing config` to minimize the number of `decision points` that appear in the workflow. Custom `processing configs` can automate ingest by specifying in advance the values for **all** decision point fields for a given transfer. Because not all transfers can be handled in the same way, the Archives has created multiple custom `processing configs` to cover most ingest scenarios.
 
-Standard and custom `processing configs` are (or will be) the same for the Archives' two Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
+Standard and custom `processing configs` are (or will be) the same for the Archives' two production Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
 
-See also Archivematica's own [documentation describing processing configuration fields and their options](https://www.archivematica.org/en/docs/archivematica-1.13/user-manual/administer/dashboard-admin/#processing-config-fields).
+For more detail, see Archivematica's own [documentation describing processing configuration fields and their options](https://www.archivematica.org/en/docs/archivematica-1.13/user-manual/administer/dashboard-admin/#processing-config-fields).
 
 ## Standard configuration
 - [Standard (default) processing config](standard.md)
 
-This is the default standard configuration. It exposes 10 `decision points` that require manual intervention; see [Decision Points](../ingest-guidelines/decisions-points.md) for a description of options.
+This is the default standard configuration. It exposes 10 `decision points` that require the archivist's manual intervention; see [Decision Points](../ingest-guidelines/decisions-points.md) for a description of options.
 
 ## Archivematica backlog
 | Config | Description |
@@ -19,21 +19,21 @@ This is the default standard configuration. It exposes 10 `decision points` that
 
 This config sends transfer packages to the Archivematica `Backlog` tab.
 - Use **only** when you intend to use Archivematica for appraisal, selection and arrangement via the `Appraisal` tab and in the near future.
-- Archivematica's `Backlog` space should not be used for long-term backlog storage; create `Backlog AIPs` instead.
+- Archivematica's `Backlog` space should **not** be used for long-term backlog storage; create `Backlog AIPs` instead.
 
 ## Backlog AIPs
 | Config | Description |
 |:---	   |:---         |
-| [bcklg_encr](bcklg-encr.md) | Full AIP, no normalization, send to encrypted storage |
-| [bcklg_opn](bcklg-opn.md) | Full AIP, no normalization, send to open (non-encrypted) storage |
+| [bcklg_encr](bcklg-encr.md) | Full (backlog) AIP, no normalization, send to encrypted storage |
+| [bcklg_opn](bcklg-opn.md) | Full (backlog) AIP, no normalization, send to open (non-encrypted) storage |
 
 These configs create `Backlog AIPs` – full Archivematica AIPs, but with **no** normalization for preservation or access, i.e. files are stored in original formats only.
 
-Use to send transfers to backlog for later processing (appraisal, selection, arrangement) outside Archivematica. Later processing entails download and work on the files, then re-ingest of the new package and deletion of the old `Backlog AIP`.
+Use to send transfers to backlog for later archival processing outside Archivematica. Later processing entails download and work on the files (appraisal, selection, arrangment), then re-ingest of the new package and deletion of the old `Backlog AIP`.
 
-Normalization is omitted at this stage because:
-- Preservation copies would be created in the same directory as the originals, making later processing (and re-ingest) more cumbersome – the processing archivist will want to work on the set of original files rather than a double set of originals + preservation copies.
-- Access copies would be created and stored to a single directory, regardless of their location in the original folder hierarchy – with large transfers, this makes it difficult to locate access copies as needed.
+Normalization is omitted at this stage because it would create:
+- Preservation copies in the same directory as the originals, making later processing (and re-ingest) more cumbersome – the processing archivist will want to work on the set of original files rather than a double set of originals + preservation copies.
+- Access copies in a single, flattened directory, regardless of their location in the original folder hierarchy – with large transfers, this makes it difficult to locate access copies as needed.
 
 The main variable here is whether or not to encrypt the `Backlog AIP`.
 - Choose to encrypt if there is any possibility that the transfer contains personal or confidential information.
@@ -51,7 +51,7 @@ The main variable here is whether or not to encrypt the `Backlog AIP`.
 | [prc_encr_dipMNL_str](prc-encr-dipmnl-str) | Encrypted storage, DIP (redacted) created manually outside Archivematica, do not send DIP to AtoM |
 | [prc_encr_dipAM_str](prc-encr-dipam-str.md) | Encrypted storage, normalize for access, do not send DIP to AtoM |
 
-Use these configs for fully processed AIPs, i.e. the contents have been appraised, selected and arranged and will not require further action or changes.
+Use these configs for fully processed AIPs, i.e. the contents have been appraised, selected and arranged and will not be subject to further action or changes.
 
 The main variables are whether to:
 - Store encrypted or open.
