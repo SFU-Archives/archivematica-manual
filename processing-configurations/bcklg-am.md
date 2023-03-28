@@ -35,6 +35,4 @@ Use to send a transfer to Archivematica's `Backlog` tab for processing in Archiv
 | Store DIP? | None |
 | Store DIP location: | None |
 
-For more information, see also Archivematica's own [documentation describing processing configuration fields and their options](https://www.archivematica.org/en/docs/archivematica-1.13/user-manual/administer/dashboard-admin/#processing-config-fields).
-
 ###### Last updated: Mar 28, 2023

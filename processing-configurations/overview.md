@@ -5,6 +5,8 @@ Archivematica `processing configurations` regulate how many `decision points` ar
 
 Standard and custom `processing configs` are (or will be) the same for the Archives' two Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
 
+See also Archivematica's own [documentation describing processing configuration fields and their options](https://www.archivematica.org/en/docs/archivematica-1.13/user-manual/administer/dashboard-admin/#processing-config-fields).
+
 ## Standard configuration
 - [Standard (default) processing config](standard.md)
 
