@@ -5,27 +5,14 @@ Archivematica `processing configurations` regulate how many `decision points` ar
 
 Standard and custom `processing configs` are (or will be) the same for the Archives' two Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
 
-## Contents
-- [Standard configuration](#standard-configuration)
--- [standard-config](standard.md)
+## List of processing configs
+- [Standard configuration](#standard-configuration) > [standard-config](standard.md)
 
-- [Archivematica backlog](#archivematica-backlog)
--- [bcklg_AM](bcklg-am.md)
+- [Archivematica backlog](#archivematica-backlog) > [bcklg_AM](bcklg-am.md)
 
-- [Backlog AIPs](#backlog-aips)
--- [bcklg_opn](bcklg-opn.md)
--- [bcklg_encr](bcklog-encr.md)
+- [Backlog AIPs](#backlog-aips) > [bcklg_opn](bcklg-opn.md) | [bcklg_encr](bcklog-encr.md)
 
-- [Processed AIPs](#processed-aips)
--- [prc_opn_noDIP](prc_opn_noDIP.md)
--- [prc_opn_dipMNL_atm](prc_opn_dipMNL_atm.md)
--- [prc_opn_dipMNL_str](prc_opn_dipMNL_str.md)
--- [prc_opn_dipAM_atm](prc_opn_dipAM_atm.md)
--- [prc_opn_dipAM_str](prc_opn_dipAM_str.md)
--- [prc_encr_noDIP](prc_encr_noDIP.md)
--- [prc_encr_dipMNL_atm](prc_encr_dipMNL_atm.md)
--- [prc_encr_dipMNL_str](prc_encr_dipMNL_str.md)
--- [prc_encr_dipAM_str](prc_encr_dipAM_str.md)
+- [Processed AIPs](#processed-aips) > [prc_opn_noDIP](prc_opn_noDIP.md) | [prc_opn_dipMNL_atm](prc_opn_dipMNL_atm.md) | [prc_opn_dipMNL_str](prc_opn_dipMNL_str.md) | [prc_opn_dipAM_atm](prc_opn_dipAM_atm.md) | [prc_opn_dipAM_str](prc_opn_dipAM_str.md) | [prc_encr_noDIP](prc_encr_noDIP.md) | [prc_encr_dipMNL_atm](prc_encr_dipMNL_atm.md) | [prc_encr_dipMNL_str](prc_encr_dipMNL_str.md) | [prc_encr_dipAM_str](prc_encr_dipAM_str.md)
 
 ## Standard configuration
 The default standard configuration exposes 10 `decision points`. See [Decision Points](../ingest-guidelines/decisions-points.md) for a discussion of options on the microservices that require manual intervention.
