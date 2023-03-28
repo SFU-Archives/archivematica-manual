@@ -5,11 +5,33 @@ Archivematica `processing configurations` regulate how many `decision points` ar
 
 Standard and custom `processing configs` are (or will be) the same for the Archives' two Archivematica pipelines. Not all configs have yet been created in both pipelines (as of Mar 2023).
 
+## Contents
+[Standard configuration](#standard-configuration)
+- [standard-config](standard.md)
+
+[Archivematica backlog](#archivematica-backlog)
+- [bcklg_AM](bcklg-am.md)
+
+[Backlog AIPs](#backlog-aips)
+- [bcklg_opn](bcklg-opn.md)
+- [bcklg_encr](bcklog-encr.md)
+
+[Processed AIPs](#processed-aips)
+- [prc_opn_noDIP](prc_opn_noDIP.md)
+- [prc_opn_dipMNL_atm](prc_opn_dipMNL_atm.md)
+- [prc_opn_dipMNL_str](prc_opn_dipMNL_str.md)
+- [prc_opn_dipAM_atm](prc_opn_dipAM_atm.md)
+- [prc_opn_dipAM_str](prc_opn_dipAM_str.md)
+- [prc_encr_noDIP](prc_encr_noDIP.md)
+- [prc_encr_dipMNL_atm](prc_encr_dipMNL_atm.md)
+- [prc_encr_dipMNL_str](prc_encr_dipMNL_str.md)
+- [prc_encr_dipAM_str](prc_encr_dipAM_str.md)
+
 ## Standard configuration
 The default standard configuration exposes 10 `decision points`. See [Decision Points](../ingest-guidelines/decisions-points.md) for a discussion of options on the microservices that require manual intervention.
 
 **Config:**
-- `Standard processing config`: [View](standard.md)
+- `Standard (default) processing config` – [View](standard.md)
 
 ## Archivematica backlog
 This config sends transfer packages to the Archivematica `Backlog` tab.
@@ -17,7 +39,7 @@ This config sends transfer packages to the Archivematica `Backlog` tab.
 - Archivematica's `Backlog` space should not be used for long-term backlog storage; create `Backlog AIPs` instead.
 
 **Config:**
-- `bcklog_AM`: sends package to Archivematica backlog | [View](bcklog-am.md)
+- `bcklog_AM` – sends package to Archivematica backlog | [View](bcklog-am.md)
 
 ## Backlog AIPs
 These configs create full Archivematica AIPs, but with **no** normalization for preservation or access (stores files in original directory structure and in original formats only).
