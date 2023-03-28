@@ -1,5 +1,5 @@
 ###### [Archivematica Manual](../README.md) `>` Ingest Guidelines
-###### [Start a Transfer](start-transfer.md) `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md) `|` [Error Handling](error-handling.md)
+###### [Start a Transfer](start-transfer.md) `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Errors](errors.md)
 
 # Ingest Guidelines: Overview
 This section describes how to process a `transfer package` through the Archivematica `Dashboard`.
@@ -27,19 +27,18 @@ If a DIP is created, it is always stored. This ensures that access copies of all
 Not all transfers require DIPs to be created; see [Ingest scenarios](../ingest-scenarios/overview.md) for different cases.
 
 ## Use processing configurations whenever possible
-Ingest `decision points` occur when Archivematica microservices prompt the archivist to manually choose an option. The Archives has structured the standard default `processing config` to minimize the number of `decision points` that must be answered. Custom `processing configs` automate ingest by specifying in advance **all** decision point selections for a given transfer. Not all transfers can be handled in the same way, so the Archives has created multiple custom `processing configs` to cover most ingest scenarios.
+Archivematica `processing configurations` automate ingest by pre-determining how Archivematica will process a given transfer from start to finish. Not all transfers can be handled in the same way, so the Archives has created multiple custom `processing configs` to cover most ingest scenarios.
 
-You should only use the [standard default configuration](../processing-configurations/standard.md) when none of the custom configs applies to your transfer. In some cases (e.g. digitization project), you may want to create a project-specific, one-off config to handle all ingests for just that project.
+You should only use the [standard default configuration](../processing-configurations/standard.md) (which requires manual intervention at a number of `decision points`) when none of the custom configs applies to your transfer. In some cases (e.g. digitization project), you may want to create a project-specific, one-off config to handle all ingests for just that project.
 
-See the [Processing configurations overview page](../processing-configurations/overview.md) for a list of the customized configurations available.
+See the [Processing configurations overview page](../processing-configurations/overview.md) for a description of the customized configs available.
 
 See the [Select decision points page](decision-points.md) for the prompts that occur with the [standard default configuration](../processing-configurations/standard.md).
 
-## Contents of this section
+## Workflow
 - [Start a transfer](start-transfer.md)
 - [Select decision points](decision-points.md)
 - [Update the AIS](update-ais.md)
-- [Appraise, select and arrangement transfer contents](appraisal-and-selection.md)
 - [Handle Archivematica errors](error-handling.md)
 
 ###### Last updated: Mar 28, 2023

@@ -1,5 +1,5 @@
 ###### [Archivematica Manual](../README.md) `|` [Ingest Guidelines](overview.md)
-###### [Start a Transfer](start-transfer.md) `|` Decision Points `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md) `|` [Error Handling](error-handling.md)
+###### [Start a Transfer](start-transfer.md) `|` Decision Points `|` [Update AIS](update-ais.md) `|` [Errors](errors.md)
 
 # Decision Points
 `Decision points` occur when certain microservices in the Archivematica `Dashboard` require the archivist to manually choose an option. This page describes the `decision points` in the [standard processing configuration](../processing-configurations/standard.md).
@@ -18,16 +18,17 @@
 - [Store DIP location](#store-dip-location)
 
 ## Create SIP from Transfer
-Specify what to do with the `SIP` (transfer).
+Specify what to do with the SIP (transfer).
 
 `Create single SIP and continue processing`
 - Send the transfer to the `Ingest` tab to continue.
-- Use if the transfer does not require any additional appraisal, selection, or arrangement.
-- Use if it does require additional processing but you will not be doing this in the immediate future (process through Archivematica to create a [backlog AIP](../ingest-scenarios/processing-backlog-aips.md).
+- Use if the transfer contents do not require any additional archival processing (appraisal, selection, or arrangement).
+- Use if it does require additional processing but you will not be doing this in the near future.
+- Use if you will be do archival processing in the near future, but not in the Archivematica.
 
 `Send to backlog`
 - Send to Archivematica backlog.
-- Use this option if you intend to process the transfer in the immediate future (appraise, select, arrange and describe).
+- Use this option **only** if you intend to process (appraise, select, arrange) transfer contents in the near future **and** you will be doing this in Archivematica on the `Appraisal` tab.
 
 `Reject transfer`
 - Cancel the ingest process.
@@ -42,10 +43,12 @@ Specify whether / how to normalize files in the transfer; determines whether Arc
 
 `Normalize for preservation`
 - Use if you manually created `access copies` prior to ingest (see [Manual Normalization](../pre-ingest-actions/manual-normalization.md)).
+- Use if you do not want to create `access copies` yet (e.g. you are creating a `Backlog AIP`).
 - You can also use this option for some formats that currently have no normalization rules for access (e.g. email ingested as `mbox`).
 
 `Normalize for access`
-- Can be used if the original files are already in `preservation format` but it is typically better to let Archivematica decide whether file formats do or do not already comply with `preservation formats`.
+- Can be used if the original files are already in `preservation format` and you only need Archivematica to create `access copies`.
+- It is typically better to let Archivematica decide whether file formats do or do not already comply with `preservation formats`.
 
 `Normalize service files for access`
 - Use if you manually created `service files` prior to ingest (see [Manual Normalization](../pre-ingest-actions/manual-normalization.md)).
@@ -73,11 +76,11 @@ Pink shading indicates that a file has not been normalized to an accepted preser
 - If you have concerns about a particular result, consult with Artefactual support.
 - For more information on how to handle failures, see [Error Handling](error-handling.md).
 
-When you have review normalization results, choose an option: `Approve`, `Redo`, or `Reject`.
+When you have reviewed normalization results, choose an option: `Approve`, `Redo`, or `Reject`.
 - It isn't entirely clear what affect `Redo` has (the Archives has not experimented with this option).
 
 ## Add metadata if desired
-You can add descriptive or rights metadata to the `SIP` by clicking the `document icon` next to the drop-down menu.
+You can add descriptive or rights metadata to the SIP by clicking the `document icon` next to the drop-down menu.
 - The Archives does not currently use this feature but there may be use cases in the future.
 - Choose `Continue`.
 
@@ -87,37 +90,36 @@ This step lets you runs file format identification and normalization on `submiss
 Choose `Yes` if you included `submission documentation` in the `transfer package` (see [Submission Documentation](../pre-ingest-actions/submission-documentation.md)); otherwise, choose `No`.
 
 ## AIP and DIP creation / storage
-You will typically be prompted for `AIP` and `DIP` microservices at the same time. `AIP` processing typically takes longer. **Always let Archivematica complete `AIP` processing before running the `DIP` microservices.**
-- If you process the `DIP` first and an error subsequently occurs during `AIP` creation / storage, you will then have to manually delete the uploaded or stored DIP.
+You will typically be prompted for AIP and DIP microservices at the same time. AIP processing typically takes longer. **Always let Archivematica complete AIP processing before running the DIP microservices.**
+- If you process the DIP first and an error subsequently occurs during AIP creation / storage, you will then have to manually delete the uploaded or stored DIP.
 
 ## Store AIP
 This is your final chance to reject the AIP and cancel the current transfer.
 
 `Store AIP`
-- Use to continue.
+- Select to continue.
 
 `Reject AIP`
-- Use to cancel, e.g. if you realize you made a mistake and wish to fix and re-start.
+- Select to cancel, e.g. if you realize you made a mistake and wish to fix and re-start.
 
 ## Store AIP location
 You can store the AIP with or without `encryption`.
-- If there is any possibility that the `AIP` includes personal or confidential information, it should be `encrypted`.
+- If there is any possibility that the AIP includes personal or confidential information, it should be `encrypted`.
 - This includes materials that would have `Access status` = "Pending review" when processed.
 
-Encryption is used to ensure that the Archives can send out `AIPs` containing sensitive data to third parties for geo-remote backup for recovery purposes. **Every encrypted `AIP` is also stored locally in an unencrypted copy in a `replication` directory.**
+Encryption is used to ensure that the Archives can send out AIPs containing sensitive data to third parties for geo-remote backup for recovery purposes. **Every encrypted AIP is also stored locally in an unencrypted copy in a `replication` directory.**
 
 `Default location`
 - Do not use.
 
 `<pipeline_name> AIP store`
-- Use for `AIPs` that do not need encryption, i.e. they are known to contain only `open` materials.
+- Use when the AIP does not need encryption, i.e. it is known to contain only `open` materials.
 
 `Encrypted AIPs <pipelines`
-- Use for `AIPs` that require encryption.
+- Use when AIP requires encryption.
 
 ## Upload DIP
-- If an error occurs during `AIP` creation / storage, you will likely have to re-run the entire transfer
-This step allows you to upload the `DIP` to SFU AtoM (production site).
+Use when you want to send the DIP to SFU AtoM (production site).
 - **Materials must first be cleared for access and copyright restrictions before they can be uploaded.**
 
 `Upload DIP to AtoM/Binder`
@@ -126,6 +128,7 @@ This step allows you to upload the `DIP` to SFU AtoM (production site).
 
 When selecting this option you will be prompted to enter the AtoM `stub` of the **parent** description.
 - The `stub` is typically the parent reference code with a lowercase `f-` (e.g. "f-49-1-0-0-1").
+- Archivematica will create new AtoM `item` records below the parent AtoM record.
 - If you know that you will be uploading to AtoM, you can save this step by enter the parent `stub` in the `Access system ID`; see [Start a Transfer](start-transfer.md#access-system-id).
 
 `Upload DIP to Archives Space`, `Upload DIP to ContentDM`
@@ -138,10 +141,10 @@ When selecting this option you will be prompted to enter the AtoM `stub` of the 
 - Use for digitized materials that were previously described in AtoM (to upload these, see [CLI DIP Upload](../dip-management/cli-dip-upload.md)).
 
 ## Store DIP
-If you chose to normalize for access (i.e. created a DIP), always choose `Store DIP`.
+If you chose to normalize for access or manually created an `access copy`, always choose `Store DIP`.
 
 ## Store DIP location
 Always choose `<pipeline_name> DIP store`; do not use `Default location`.
 
 ---
-###### Last updated: Jan 28, 2022
+###### Last updated: Mar 28, 2003

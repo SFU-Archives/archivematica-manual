@@ -1,5 +1,5 @@
 ###### [Archivematica Manual](../README.md) `|` [Ingest Guidelines](overview.md)
-###### Start a Transfer `|` [Decision Points](decision-points.md) `| `[Update AIS](update-ais.md) `|` [Appraisal and Selection](appraisal-and-selection.md) `|` [Error Handling](error-handling.md)
+###### Start a Transfer `|` [Decision Points](decision-points.md) `|` [Update AIS](update-ais.md) `|` [Errors](errors.md)
 
 # Start a Transfer
 This page describes how to start an ingest project on the `Transfer` tab.

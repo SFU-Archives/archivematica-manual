@@ -23,16 +23,12 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 - [Overview](ingest-guidelines/overview.md)
 - [Start a Transfer](ingest-guidelines/start-transfer.md)
 - [Decision Points](ingest-guidelines/decision-points.md)
-- Update AIS Database
-- Appraisal and Selection
+- [Update AIS Database](ingest-guidelines/update-AIS.md)
+- [Archivematica Errors](ingest-guidlines/errors.md)
 
 ### Processing Configurations
 - [Overview](processing-configurations/overview.md)
 - [Standard Processing Configuration](processing-configurations/standard.md)
-
-**Standard transfers pipeline**
-
-**Larger transfers pipeline**
 
 ### AIP Management
 - Register AIPs (AIS)
@@ -49,4 +45,4 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 ### Backup and Recovery
 - Backup
 
-###### Last updated: Jan 21, 2022
+###### Last updated: Mar 28, 2023
