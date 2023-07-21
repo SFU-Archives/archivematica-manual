@@ -1,6 +1,7 @@
 ###### [Archivematica Manual](../README.md) `>` [Processing Configurations](overview.md)
 
-# Standard Processing Configuration
+# Default Processing Configuration
+The Archives' default processing config exposes 10 decision points that require the archivist's intervention; see [Decision Points](../ingest-guidelines/decisions-points.md) for a description of options.
 
 | Microservice | Setting |
 |:---	         |:---     |
@@ -31,6 +32,4 @@
 | Store DIP 	| None 	|
 | Store DIP location: 	| None 	|
 
-
----
-###### Last updated: Jan 26, 2022
+###### Last updated: Jul 23, 2023
