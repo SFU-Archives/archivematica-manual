@@ -13,7 +13,7 @@ The table below lists the Archives' processing configs, with links to the settin
 
 | Config | Description |
 |:---	   |:---         |
-| [Default](default.md) | Default config, exposes 10 decisions point for manual intervention |
+| [Default](default-config.md) | Default config, exposes 10 decisions point for manual intervention |
 | [bcklog_AM](bcklg-am.md) | Sends transfer to Archivmatica backlog |
 | [bcklg_encr](bcklg-encr.md) | Full (backlog) AIP, no normalization, send to encrypted storage |
 | [bcklg_opn](bcklg-opn.md) | Full (backlog) AIP, no normalization, send to open (non-encrypted) storage |
@@ -22,11 +22,9 @@ The table below lists the Archives' processing configs, with links to the settin
 | [prc_opn_dipMNL_str](prc-opn-dipmnl-str.md) | Open storage, DIP created manually outside Archivematica, do not send DIP to AtoM |
 | [prc_opn_dipAM_atm](prc-opn-dipam-atm.md) | Open storage, normalize for access, send DIP to AtoM |
 | [prc_opn_dipAM_str](prc-opn-dipam-str.md) | Open storage, normalize for access, do not send DIP to AtoM |
-| Config | Description |
-|:---	   |:---         |
 | [prc_encr_noDIP](prc-encr-nodip.md) | Encrypted storage, no DIP normalization or storage |
 | [prc_encr_dipMNL_atm](prc-encr-dipmnl-atm.md) | Encrypted storage, DIP (redacted) created manually outside Archivematica, send (redacted) DIP to AtoM |
-| [prc_encr_dipMNL_str](prc-encr-dipmnl-str) | Encrypted storage, DIP (redacted) created manually outside Archivematica, do not send DIP to AtoM |
-| [prc_encr_dipAM_str](prc-encr-dipam-str.md) | Encrypted storage, normalize for access, do not send DIP to AtoM |
+| [prc_encr_dipMNL_str](prc-encr-dipmnl-str.md) | Encrypted storage, DIP (redacted) created manually outside Archivematica, do not send DIP to AtoM |
+| [prc_encr_dipAM_str](prc-encr-dipmnl-str.md) | Encrypted storage, normalize for access, do not send DIP to AtoM |
 
 ###### Last updated: Jul 21, 2023

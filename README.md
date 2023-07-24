@@ -32,7 +32,7 @@ SFU Archives uses [Archivematica](https://www.archivematica.org/en/) at its main
 - [Default Processing Configuration](processing-configurations/default-config.md)
 - [Standardize Processing Configurations](processing-configurations/standardized-configs.md)
 - [Custom Processing Configurations](processing-configurations/customized-configs.md)
-- [Decision Tree](../downloads/decision-tree-processing-configs.png)
+- [Decision Tree](downloads/decision-tree-processing-configs.png)
 
 ### AIP Management
 - Register AIPs (AIS)

@@ -18,7 +18,7 @@ This config sends transfer packages to the Archivematica **Backlog** tab.
 ## Backlog AIPs
 These configs create **Backlog AIPs** – full Archivematica AIPs, but with **no** normalization for preservation or access, i.e. files are stored in original formats only.
 
-Use to send transfers to backlog for later archival processing outside Archivematica. This entails downloading and working on the files (appraisal, selection, arrangement), then re-ingesting the new package and deleting of the old `Backlog AIP`.
+Use to send transfers to backlog for later archival processing outside Archivematica. Later processing entails downloading and working on the files (appraisal, selection, arrangement), then re-ingesting the new package and deleting of the old `Backlog AIP`.
 
 Normalization is omitted at this stage because:
 - Normalization creates preservation copies in the same directory as the originals, making later processing (and re-ingest) more cumbersome – the processing archivist will want to work on the set of original files rather than a double set of originals + preservation copies.
@@ -56,8 +56,8 @@ Open materials (no restrictions):
 
 Restricted / pending review materials:
 - [prc_encr_noDIP](prc-encr-nodip.md) - No DIP created
-- [prc_encr_dipAM_str](prc-encr-dipam-str.md) - DIP created by Archivematica, not sent to AtoM
-- [prc_encr_dipMNL_str](prc-encr-dipmnl-str) - DIP created manually, not sent to AtoM
+- [prc_encr_dipAM_str](prc-encr-dipmnl-str.md) - DIP created by Archivematica, not sent to AtoM
+- [prc_encr_dipMNL_str](prc-encr-dipmnl-str.md) - DIP created manually, not sent to AtoM
 - [prc_encr_dipMNL_atm](prc-encr-dipmnl-atm.md) - redacted DIP created manually, sent to AtoM
 
 ###### Last updated: Jul 21, 2023
