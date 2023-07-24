@@ -7,4 +7,7 @@ This page documents recent changes and additions to the Manual.
 [Processing Configurations](processing-configurations/overview.md)
 - Updated section, added decision tree and config settings spreadsheet
 
-###### Last updated: Jul 21, 2023
+[Errors](ingest-guidelines/errors.md)
+- Added content on error handling.
+
+###### Last updated: Jul 24, 2023
